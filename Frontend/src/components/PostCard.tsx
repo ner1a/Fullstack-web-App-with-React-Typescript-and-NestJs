@@ -23,7 +23,7 @@ function PostCard(props: PostCardProps) {
     <>
       <article
         aria-labelledby={`post-${props.id}-title`}
-        className="flex flex-col h-[320px] border rounded-lg p-8 lg:basis-32/100 md:basis-49/100 sm:basis-full relative cursor-pointer hover:shadow-lg hover:scale-[1.02] transition-transform"
+        className="flex flex-col h-[320px] w-[364px] border rounded-lg p-8 lg:basis-32/100 md:basis-49/100 sm:basis-full relative cursor-pointer hover:shadow-lg hover:scale-[1.02] transition-transform"
         onClick={() => setOpen(true)}
         role="button"
         tabIndex={0}

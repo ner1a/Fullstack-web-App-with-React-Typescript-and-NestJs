@@ -12,7 +12,7 @@ import Posts from './components/Posts.tsx';
 const router = createBrowserRouter([
   { path: '/', element: <RootLayout />,
      children: [
-      { path: '/users', element: <Users /> },
+      { path: '/', element: <Users /> },
       { path: '/posts', element: <Posts />}
     ] 
   },

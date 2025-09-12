@@ -39,7 +39,7 @@ function UserCard(props: UserCardProps) {
         <>
             <article
                 aria-labelledby={`user-${props.id}-name`}
-                className="flex flex-col border rounded-lg p-8 lg:basis-32/100 md:basis-49/100 sm:basis-full relative cursor-pointer hover:shadow-lg hover:scale-[1.02] transition-transform"
+                className="flex flex-col h-[320px] w-[364px] border rounded-lg p-8 lg:basis-32/100 md:basis-49/100 sm:basis-full relative cursor-pointer hover:shadow-lg hover:scale-[1.02] transition-transform"
                 role="button"
                 tabIndex={0}
                 onClick={() => setShowModal(true)}
