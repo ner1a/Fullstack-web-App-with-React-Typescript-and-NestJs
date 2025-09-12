@@ -1,33 +1,33 @@
 # Fullstack Web App — React Frontend + NestJS Backend
 
-Bu repo, **React + TypeScript (Vite)** tabanlı bir frontend ve **NestJS + TypeScript** tabanlı bir backend içerir.  
-Her iki proje de kendi klasöründe bağımsız olarak çalışır ve ayrı README dosyalarına sahiptir.
+This repository contains a **React + TypeScript (Vite)** based frontend and a **NestJS + TypeScript** based backend.  
+Both projects live in their own directories, run independently, and have their own detailed README files.
 
 ---
 
-## 📂 Proje Yapısı
+## 📂 Project Structure
 
 ```
 project-root/
 ├── frontend/      # React + Vite + TS (UI)
 ├── backend/       # NestJS + TS (API)
 ├── package.json   # (root meta)
-└── README.md      # (bu dosya)
+└── README.md      # (this file)
 ```
 
-- **frontend/** klasöründe uygulamanın kullanıcı arayüzü vardır.  
-- **backend/** klasöründe REST API servisleri vardır.  
-- Frontend ve backend birbirinden bağımsızdır; farklı portlarda çalışır.
+- **frontend/** contains the user interface of the application.  
+- **backend/** contains the REST API services.  
+- They run independently on different ports.
 
 ---
 
-## 🚀 Başlangıç
+## 🚀 Getting Started
 
-### Gereksinimler
+### Requirements
 - Node.js **>=18**
-- npm veya pnpm
+- npm or pnpm
 
-### Çalıştırma
+### Running
 
 #### Backend
 ```bash
@@ -43,21 +43,21 @@ pnpm install
 pnpm dev          # http://localhost:5173
 ```
 
-> Daha ayrıntılı kurulum ve kullanım yönergeleri için **frontend/** ve **backend/** dizinlerindeki README.md dosyalarına bakın.
+> For more detailed setup and usage instructions, please refer to the README.md inside **frontend/** and **backend/** directories.
 
 ---
 
-## 🔍 Hızlı Kontrol (Smoke Test)
+## 🔍 Quick Check (Smoke Test)
 
-Backend çalışırken:
+With backend running:
 ```bash
 curl http://localhost:3000/health
 # {"status":"ok"}
 ```
 
-Frontend çalışırken:
-- `http://localhost:5173/users` → kullanıcı listesi
-- `http://localhost:5173/posts` → gönderi listesi
+With frontend running:
+- `http://localhost:5173/users` → users list
+- `http://localhost:5173/posts` → posts list
 
 ---
 
@@ -66,21 +66,21 @@ Frontend çalışırken:
 ### Backend
 ```bash
 cd backend
-pnpm build   # dist/ klasörü oluşur
+pnpm build   # outputs to dist/
 ```
 
 ### Frontend
 ```bash
 cd frontend
-pnpm build   # dist/ klasörü oluşur
+pnpm build   # outputs to dist/
 ```
 
-- **Frontend deploy**: Netlify / Vercel gibi platformlarda `dist/` yayınlanabilir.  
-- **Backend deploy**: Node.js destekli platformlarda (Heroku, Render, Railway vb.) çalıştırılabilir.
+- **Frontend deploy**: Can be deployed on Netlify / Vercel using the `dist/` output.  
+- **Backend deploy**: Can be hosted on Node.js capable platforms such as Heroku, Render, Railway, etc.
 
 ---
 
-## 📝 Notlar
+## 📝 Notes
 
-- Frontend ve backend kendi README dosyalarında ayrıntılı açıklamalara sahiptir.  
-- Root README yalnızca **projenin genel yapısı ve yönlendirmeleri** içerir.
+- Frontend and backend each have their own README files with detailed setup and usage instructions.  
+- The root README only provides **overall project structure and navigation**.
