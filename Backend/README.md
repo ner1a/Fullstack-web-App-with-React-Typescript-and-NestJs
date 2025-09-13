@@ -30,16 +30,14 @@ npm run start:dev
 - `GET    /users` — list users
 - `GET    /users/:id` — get one
 - `POST   /users` — create
-- `PATCH  /users/:id` — update partial
-- `PUT    /users/:id` — replace (optional)
+- `PUT    /users/:id` — replace
 - `DELETE /users/:id` — delete
 
 ### Posts
 - `GET    /posts` — list posts
 - `GET    /posts/:id` — get one
 - `POST   /posts` — create
-- `PATCH  /posts/:id` — update partial
-- `PUT    /posts/:id` — replace (optional)
+- `PUT    /posts/:id` — replace
 - `DELETE /posts/:id` — delete
 
 > **Relation:** `post.userId` must refer to an existing user. You may validate this on create/update.
