@@ -67,20 +67,6 @@ With frontend running:
 
 ---
 
-## ⚙️ Build & Deploy
-
-### Backend
-```bash
-cd backend
-pnpm build   # outputs to dist/
-```
-
-### Frontend
-```bash
-cd frontend
-pnpm build   # outputs to dist/
-```
-
 - **Frontend deploy**: Can be deployed on Netlify / Vercel using the `dist/` output.  
 - **Backend deploy**: Can be hosted on Node.js capable platforms such as Heroku, Render, Railway, etc.
 
