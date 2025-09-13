@@ -39,7 +39,7 @@ project-root/
 ```bash
 cd backend
 pnpm install
-pnpm start dev    # http://localhost:3000
+pnpm start:dev    # http://localhost:3000
 ```
 
 #### Frontend
