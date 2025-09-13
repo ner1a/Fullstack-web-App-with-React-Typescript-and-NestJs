@@ -26,7 +26,7 @@ function CreateUserModal({ isOpen, onClose, onCreate }: Props) {
     if (isOpen) {
       setError(null);
     }
-  }, [isOpen,]);
+  }, [isOpen]);
 
   const handleSubmit = async (e?: React.FormEvent) => {
     e?.preventDefault();
