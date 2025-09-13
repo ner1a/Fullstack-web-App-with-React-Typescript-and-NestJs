@@ -33,7 +33,7 @@ function Users() {
 
   const handleCreateClick = () => setShowCreateModal(true);
 
-  const handleCreate = async (payload: User) => {
+  const handleCreate = async (payload: Omit<User, 'id'>) => {
     await dispatch(createUser(payload));
     setShowCreateModal(false);
   };
@@ -135,7 +135,6 @@ function Users() {
 
       <CreateUserModal
         isOpen={showCreateModal}
-        users={users}
         onClose={() => setShowCreateModal(false)}
         onCreate={handleCreate}
       />
