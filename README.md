@@ -33,14 +33,14 @@ project-root/
 ```bash
 cd backend
 pnpm install
-pnpm start:dev    # http://localhost:3000
+pnpm start dev    # http://localhost:3000
 ```
 
 #### Frontend
 ```bash
 cd frontend
 pnpm install
-pnpm dev          # http://localhost:5173
+pnpm run dev      # http://localhost:5173
 ```
 
 > For more detailed setup and usage instructions, please refer to the README.md inside **frontend/** and **backend/** directories.
@@ -56,7 +56,7 @@ curl http://localhost:3000/health
 ```
 
 With frontend running:
-- `http://localhost:5173/users` → users list
+- `http://localhost:5173/` → users list
 - `http://localhost:5173/posts` → posts list
 
 ---
