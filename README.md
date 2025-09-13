@@ -5,6 +5,12 @@ Both projects live in their own directories, run independently, and have their o
 
 ---
 
+# Check the development from Vercel
+
+https://frontend-git-onlyfrontend-ner1as-projects.vercel.app/
+
+---
+
 ## 📂 Project Structure
 
 ```
