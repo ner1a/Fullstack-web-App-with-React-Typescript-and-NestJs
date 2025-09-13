@@ -7,9 +7,10 @@ type ModalProps = {
   title?: string;
   onClose: () => void;
   children: React.ReactNode;
+  styleName?: string;
 };
 
-export default function Modal({ isOpen, title, onClose, children }: ModalProps) {
+export default function Modal({ isOpen, title, onClose, children, styleName }: ModalProps) {
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function Modal({ isOpen, title, onClose, children }: ModalProps) 
       />
 
       <div
-        className="relative z-10 w-full max-w-2xl mx-4 rounded-lg bg-black shadow-lg max-h-4/5 overflow-auto"
+        className={`relative z-10 w-full max-w-2xl mx-4 rounded-lg bg-black shadow-lg max-h-[80vh] overflow-hidden ${ styleName }`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between p-4 border-b">
@@ -53,7 +54,7 @@ export default function Modal({ isOpen, title, onClose, children }: ModalProps) 
           </button>
         </div>
 
-        <div className="p-4">
+        <div className="p-4 userform overflow-auto">
           {children}
         </div>
       </div>

@@ -63,7 +63,12 @@ function EditUserModal({ isOpen, user, onClose, onUpdate }: Props) {
   };
 
   return (
-    <Modal isOpen={isOpen} title="Edit user" onClose={onClose}>
+    <Modal 
+      isOpen={isOpen}
+      title="Edit user"
+      onClose={onClose} 
+      styleName="h-[80vh]"
+    >
       <form onSubmit={handleSubmit} className="space-y-4" aria-describedby="create-user-error">
         <div>
           <label htmlFor="create-user-username" className="block text-sm font-medium mb-1">Username</label>

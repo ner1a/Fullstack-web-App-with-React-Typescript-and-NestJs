@@ -54,7 +54,12 @@ function CreateUserModal({ isOpen, onClose, onCreate }: Props) {
   };
 
   return (
-    <Modal isOpen={isOpen} title="Create user" onClose={onClose}>
+    <Modal 
+      isOpen={isOpen}
+      title="Create user"
+      onClose={onClose} 
+      styleName="h-[80vh]"
+    >
       <form onSubmit={handleSubmit} className="space-y-4" aria-describedby="create-user-error">
         <div>
           <label htmlFor="create-user-username" className="block text-sm font-medium mb-1">Username</label>
