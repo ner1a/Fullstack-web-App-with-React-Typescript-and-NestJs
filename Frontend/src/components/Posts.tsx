@@ -77,7 +77,7 @@ function Posts() {
   };
 
   return (
-    <main id="main" tabIndex={-1} className="max-w-6xl mx-auto p-4 min-w-[80vh]">
+    <main id="main" tabIndex={-1} className="max-w-6xl mx-auto p-4 w-[80vw]">
       <div className="flex items-center justify-between mb-4">
         <h1 className="text-2xl font-bold">Posts</h1>
         <div>
