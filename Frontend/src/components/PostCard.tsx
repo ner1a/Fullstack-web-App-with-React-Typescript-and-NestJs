@@ -23,7 +23,7 @@ function PostCard(props: PostCardProps) {
     <>
       <article
         aria-labelledby={`post-${props.id}-title`}
-        className="flex flex-col h-[320px] w-[364px] border rounded-lg p-8 lg:basis-32/100 md:basis-49/100 sm:basis-full relative cursor-pointer hover:shadow-lg hover:scale-[1.02] transition-transform"
+        className="flex justify-between flex-col h-[320px] w-[364px] border rounded-lg p-8 lg:basis-32/100 md:basis-49/100 sm:basis-full relative cursor-pointer hover:shadow-lg hover:scale-[1.02] transition-transform"
         onClick={() => setOpen(true)}
         role="button"
         tabIndex={0}
@@ -34,21 +34,32 @@ function PostCard(props: PostCardProps) {
           }
         }}
       >
+        <div>
+          <h3 
+            id={`post-${props.id}-title`}
+            className="text-center h-[55px] mt-4 mb-4 font-bold text-xl line-clamp-2">
+            {props.title}
+          </h3>
 
-        <h3 
-          id={`post-${props.id}-title`}
-          className="text-center h-[55px] mt-4 mb-4 font-bold text-xl line-clamp-2">
-          {props.title}
-        </h3>
+          <p className="mt-2 text-sm line-clamp-4 h-[78px]">{props.body}</p>
 
-        <p className="mt-2 text-sm line-clamp-4 h-[78px]">{props.body}</p>
-
-        <div className="mt-3 text-right">
-          {props.isAuthorDeleted ? (
-            <em className="text-md text-gray-500 italic">Deleted user</em>
-          ) : (
-            <span className="text-md text-gray-400 italic">{props.username}</span>
-          )}
+          <div className="mt-3 text-right">
+            {props.isAuthorDeleted ? (
+              <em className="text-md text-gray-500 italic">Deleted user</em>
+            ) : (
+              <span className="text-md text-gray-400 italic">{props.username}</span>
+            )}
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <button
+            onClick={(e) => { e.stopPropagation(); setOpen(true); }}
+            aria-expanded={open}
+            aria-controls={modalId}
+            className="p-2 rounded bg-gray-100 hover:bg-gray-200"
+          >
+            More
+          </button>
         </div>
 
         <div className="flex flex-row mt-2 mr-2 gap-2 absolute top-0 right-0">
@@ -68,16 +79,6 @@ function PostCard(props: PostCardProps) {
           </button>
         </div>
 
-        <div className="mt-3 flex justify-center">
-          <button
-            onClick={(e) => { e.stopPropagation(); setOpen(true); }}
-            aria-expanded={open}
-            aria-controls={modalId}
-            className="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200"
-          >
-            More
-          </button>
-        </div>
       </article>
 
       <Modal isOpen={open} title={props.title} onClose={() => setOpen(false)}>

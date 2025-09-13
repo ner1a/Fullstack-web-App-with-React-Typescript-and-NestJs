@@ -39,7 +39,7 @@ function UserCard(props: UserCardProps) {
         <>
             <article
                 aria-labelledby={`user-${props.id}-name`}
-                className="flex flex-col h-[320px] w-[364px] border rounded-lg p-8 lg:basis-32/100 md:basis-49/100 sm:basis-full relative cursor-pointer hover:shadow-lg hover:scale-[1.02] transition-transform"
+                className="flex justify-between flex-col h-[320px] w-[364px] border rounded-lg p-8 lg:basis-32/100 md:basis-49/100 sm:basis-full relative cursor-pointer hover:shadow-lg hover:scale-[1.02] transition-transform"
                 role="button"
                 tabIndex={0}
                 onClick={() => setShowModal(true)}
@@ -50,12 +50,24 @@ function UserCard(props: UserCardProps) {
                     }
                 }}
             >
-                <h3 className="text-center mb-4 mt-4 font-bold text-xl">{props.username}</h3>
+                <div>
+                    <h3 className="text-center mb-4 mt-4 font-bold text-xl">{props.username}</h3>
 
-                <div className="mb-1">Name: {props.name}</div>
-                <div className="mb-1">Email: {props.email}</div>
-                <div className="mb-1">Phone: {props.phone}</div>
-                <div className="mb-2">Website: {props.website}</div>
+                    <div className="mb-1">Name: {props.name}</div>
+                    <div className="mb-1">Email: {props.email}</div>
+                    <div className="mb-1">Phone: {props.phone}</div>
+                    <div className="mb-2">Website: {props.website}</div>
+                </div>
+                <div className="flex justify-center">
+                    <button
+                        aria-haspopup="dialog"
+                        onClick={(e) => { e.stopPropagation(); setShowModal(true); }}
+                        className="flex items-center gap-2 p-2 rounded hover:bg-gray-100"
+                        title="Show more"
+                    >
+                        More
+                    </button>
+                </div>
 
                 <div className="flex flex-row mt-2 mr-2 gap-2 absolute top-0 right-0">
                     <button
@@ -74,16 +86,6 @@ function UserCard(props: UserCardProps) {
                     </button>
                 </div>
 
-                <div className="mt-4 flex justify-center">
-                    <button
-                        aria-haspopup="dialog"
-                        onClick={(e) => { e.stopPropagation(); setShowModal(true); }}
-                        className="flex items-center gap-2 p-2 rounded hover:bg-gray-100"
-                        title="Show more"
-                    >
-                        More
-                    </button>
-                </div>
             </article>
 
             <Modal
